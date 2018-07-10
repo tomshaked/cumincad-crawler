@@ -4,7 +4,7 @@ from crawler import Crawler
 crawler = Crawler()
 db = Db()
 ## Create database structure - only enable for the first run
-db.create()
+# db.create()
 
 # Gets user input
 search = raw_input("Search: ") or "surface"
