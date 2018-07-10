@@ -3,11 +3,11 @@ from crawler import Crawler
 
 crawler = Crawler()
 db = Db()
-## Create database structure - only run for the first time
-# db.create()
+## Create database structure - only enable for the first run
+db.create()
 
-## get user input
-search = input("Search: ") or "robotics"
+# Gets user input
+search = raw_input("Search: ") or "surface"
 
 pages = crawler.getPages(search)
 for page in pages:
