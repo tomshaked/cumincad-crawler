@@ -17,8 +17,8 @@ class Crawler:
         fp.set_preference("browser.download.folderList", 2)
         fp.set_preference("browser.download.manager.showWhenStarting", False)
         fp.set_preference("browser.download.dir", path)
-        fp.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/pdf,application/x-pdf")
-        fp.set_preference("pdfjs.disabled", True)
+        fp.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/pdf")
+        fp.set_preference("pdfjs.enabledCache.state", False)
         self.browser = webdriver.Firefox(firefox_profile=fp)
 
         ## Get number of result pages
